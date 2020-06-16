@@ -1,6 +1,6 @@
 import React from "react";
 
-function EmployeeCard({ key, first, last, image, location }) {
+function EmployeeCard({ key, first, last, image, city, state, streetNum, streetName, zip, phone, email, yearsOfService }) {
   return (
     <div className="col l4">
       <div class="card">
@@ -12,14 +12,17 @@ function EmployeeCard({ key, first, last, image, location }) {
             {first} {last}
             <i class="material-icons right">more_vert</i>
           </span>
-          <p>{location}</p>
+          <p><strong>City:</strong> {city}, {state}</p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">
             {first} {last}
             <i class="material-icons right">close</i>
           </span>
-          <p>Employee information</p>
+          <p><strong>Phone:</strong> {phone}</p>
+          <p><strong>Email:</strong> {email}</p>
+          <p><strong>Address:</strong><br />{streetNum} {streetName}<br />{city}, {state} {zip}</p>
+          <p><strong>Years of Service:</strong> {yearsOfService}</p>
         </div>
       </div>
     </div>

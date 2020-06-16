@@ -11,19 +11,6 @@ class CardContainer extends Component {
     this.setState({ results: employees });
   }
 
-  //   handleInputChange = (event) => {
-  //     const name = event.target.name;
-  //     const value = event.target.value;
-  //     this.setState({
-  //       [name]: value,
-  //     });
-  //   };
-
-  //   handleFormSubmit = (event) => {
-  //     event.preventDefault();
-  //     this.searchMovies(this.state.search);
-  //   };
-
   render() {
     return (
       <div className="container">
@@ -35,7 +22,16 @@ class CardContainer extends Component {
                 first={employee.name.first}
                 last={employee.name.last}
                 image={employee.picture.large}
-                location={employee.location.city}
+                streetNum={employee.location.street.number}
+                streetName={employee.location.street.name}
+                city={employee.location.city}
+                state={employee.location.state}
+                zip={employee.location.postcode}
+                phone={employee.phone}
+                email={employee.email}                
+                age={employee.dob.age}
+                dob={employee.dob.date}
+                yearsOfService={employee.registered.age}
               />
             );
           })}
