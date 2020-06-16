@@ -1,13 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import CardContainer from "./components/CardContainer";
 
-function App() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <CardContainer />
+      </div>
+    );
+  }
 }
 
 export default App;
