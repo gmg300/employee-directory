@@ -1,14 +1,14 @@
 import React, { useState, createContext } from "react";
-import { results } from '../users.json'
+import { usersDB } from '../db/users.json'
 
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
-    const [users, setUsers] = useState([...results]);
+    const [users, setUsers] = useState([...usersDB]);
     
     return (
-        <UserContext.provider>
+        <UserContext.Provider value={[users, setUsers]}>
             {props.children}
-        </UserContext.provider>
+        </UserContext.Provider>
     );
 }

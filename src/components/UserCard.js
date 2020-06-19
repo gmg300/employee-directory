@@ -1,6 +1,6 @@
 import React from "react";
 
-function EmployeeCard({ key, first, last, image, city, state, streetNum, streetName, zip, phone, email, yearsOfService }) {
+function UserCard({ key, first, last, username, image, city, state, streetNum, streetName, zip, phone, email }) {
   return (
     <div className="col l4">
       <div class="card">
@@ -12,7 +12,7 @@ function EmployeeCard({ key, first, last, image, city, state, streetNum, streetN
             {first} {last}
             <i class="material-icons right">more_vert</i>
           </span>
-          <p><strong>City:</strong> {city}, {state}</p>
+          <p><strong>Username:</strong> {username}</p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">
@@ -22,11 +22,10 @@ function EmployeeCard({ key, first, last, image, city, state, streetNum, streetN
           <p><strong>Phone:</strong> {phone}</p>
           <p><strong>Email:</strong> {email}</p>
           <p><strong>Address:</strong><br />{streetNum} {streetName}<br />{city}, {state} {zip}</p>
-          <p><strong>Years of Service:</strong> {yearsOfService}</p>
         </div>
       </div>
     </div>
   );
 }
 
-export default EmployeeCard;
+export default UserCard;

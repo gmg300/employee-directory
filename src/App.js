@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import CardContainer from "./components/CardContainer";
+import SearchResultsList from "./components/SearchResultsList";
 import { UserProvider } from "./utils/UserContext";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <UserProvider>
       <div className="app">
         <Navbar />
-        <CardContainer />
+        <SearchResultsList />
       </div>
     </UserProvider>
   );
