@@ -1,17 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import CardContainer from "./components/CardContainer";
+import { UserProvider } from "./utils/UserContext";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
+function App() {
+  return (
+    <UserProvider>
+      <div className="app">
         <Navbar />
         <CardContainer />
       </div>
-    );
-  }
+    </UserProvider>
+  );
 }
 
 export default App;
