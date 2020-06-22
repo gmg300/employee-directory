@@ -5,10 +5,11 @@ function Navbar() {
     <nav>
       <div class="nav-wrapper">
         <a href="/" class="brand-logo">
-          Employee Directory
+          User Directory
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-        </ul>
+        {/* <ul class="right hide-on-med-and-down">
+        <li ><a class="search-toggle waves-effect"><i class="material-icons">search</i></a></li>
+      </ul> */}
       </div>
     </nav>
   );
