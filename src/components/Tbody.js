@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import User from "./User";
 import { UserContext } from "../utils/UserContext";
+import { SearchContext } from "../utils/SearchContext";
 
-const Tbody = ({ search }) => {
+const Tbody = () => {
   const [users] = useContext(UserContext);
-  search = search.toLowerCase();
+  const [search] = useContext(SearchContext);
   let results = users;
   
   if (search === "") {

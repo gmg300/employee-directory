@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../utils/UserContext";
 
 const Thead = () => {
+  const [users, setUsers] = useContext(UserContext);
+
   return (
     <thead>
       <tr>

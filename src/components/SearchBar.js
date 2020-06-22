@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React, { useContext } from "react";
+import { SearchContext } from "../utils/SearchContext";
 
 function SearchBar() {
-  const [search, setSearch] = useState("Search Text");
+  const [ search, setSearch ] = useContext(SearchContext);
+
 
   const handleChange = e => {
     e.preventDefault()
-    setSearch(e.target.value);
+    setSearch(e.target.value.toLowerCase());
   };
 
   return (
@@ -15,7 +17,7 @@ function SearchBar() {
           <div class="input-field col s12">
             <i class="material-icons prefix">search</i>
             <input id="icon_prefix" type="text" class="validate" onChange={handleChange}/>
-            <label for="icon_prefix">{search}</label>
+            <label for="icon_prefix">Search by name</label>
           </div>
         </div>
       </form>
