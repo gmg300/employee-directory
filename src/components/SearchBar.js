@@ -16,7 +16,7 @@ function SearchBar() {
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">search</i>
-            <input id="icon_prefix" type="text" class="validate" onChange={handleChange}/>
+            <input id="icon_prefix" type="text" onChange={handleChange}/>
             <label for="icon_prefix">Search by name</label>
           </div>
         </div>

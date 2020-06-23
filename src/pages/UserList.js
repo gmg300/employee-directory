@@ -22,7 +22,8 @@ const UserList = () => {
     }
   }
 
-  function sortName() {
+  function sortName(e) {
+    e.preventDefault()
     if (sorted === "asc") {
       userList.sort((a, b) => {
         if (a.name.first < b.name.first) {
