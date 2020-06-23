@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import User from "../components/User";
 import UserContext from "../utils/UserContext";
 import SearchContext from "../utils/SearchContext";
 
 const UserList = () => {
   const [users, setUsers] = useContext(UserContext);
+  const [sorted, setSorted] = useState(null)
   const [search, setSearch] = useContext(SearchContext);
   // console.log(users);
   let userList = filterUsers();
@@ -21,11 +22,17 @@ const UserList = () => {
     }
   }
 
-  
-  // function handleSort(e) {
-  //   console.log(e.target.innerHTML)
-  //   userList = users.sort(a,b)
-  // }
+  if (sorted !== null) {
+    userList.sort((a, b) => {
+      if (a.name.first < b.name.first) {
+        return -1;
+      }
+      if (a.name.first > b.name.first) {
+        return 1;
+      }
+      return 0;
+    });
+  }
 
   return (
     <main>
@@ -34,7 +41,7 @@ const UserList = () => {
           <table class="highlight user-list">
             <thead>
               <tr>
-                <th>Name</th>
+                <th onClick={() => setSorted('name')}>Name</th>
                 <th>Username</th>
                 <th>Phone</th>
                 <th>Email</th>

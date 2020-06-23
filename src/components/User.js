@@ -1,8 +1,8 @@
 import React from "react";
 
-function User({first, last, username, phone, email }) {
+function User({key, first, last, username, phone, email }) {
   return (
-    <tr>
+    <tr key={key}>
       <td>{first} {last}</td>
       <td>{username}</td>
       <td>{phone}</td>
