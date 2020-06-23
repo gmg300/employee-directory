@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SearchContext } from "../utils/SearchContext";
+import SearchContext from "../utils/SearchContext";
 
 function SearchBar() {
   const [ search, setSearch ] = useContext(SearchContext);
@@ -11,7 +11,7 @@ function SearchBar() {
   };
 
   return (
-    <div class="row">
+    <div class="row search-bar">
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">

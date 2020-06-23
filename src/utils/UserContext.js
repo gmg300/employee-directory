@@ -1,14 +1,5 @@
-import React, { useState, createContext } from "react";
-import { usersDB } from "../db/users.json";
+import React, { createContext } from "react";
 
-export const UserContext = createContext();
+const UserContext = createContext([]);
 
-export const UserProvider = (props) => {
-    const [users, setUsers] = useState(usersDB);
-    
-    return (
-        <UserContext.Provider value={[users, setUsers]}>
-            {props.children}
-        </UserContext.Provider>
-    );
-}
+export default UserContext;

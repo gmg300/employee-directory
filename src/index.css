@@ -20,8 +20,17 @@ nav {
   background-color: #37474f!important;
 }
 
+.search-bar {
+  margin-top: 1rem;
+}
+
 main {
   flex: 1 0 auto;
+}
+
+.user-list th {
+  cursor: pointer;
+  color: #37474f;
 }
 
 footer {
